@@ -1,0 +1,8 @@
+#-----------------------card-service-------------------
+card:
+    build: .
+    env_file:
+        - card.env
+    command: gunicorn --name service -b 0.0.0.0:5489 -w 2 wsgi:app
+    ports:
+        - "5489:5489"
