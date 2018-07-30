@@ -5,7 +5,7 @@ from flask import jsonify, request
 app = Flask(__name__)
 
 
-@app.route("/api/balance/",methods=['GET'])
+@app.route("/api/card/balance/",methods=['GET'])
 def balance():
     """
     获取账户余额
@@ -21,7 +21,7 @@ def balance():
     return jsonify(r), 200
 
 
-@app.route("/api/account/",methods=['GET'])
+@app.route("/api/card/account/",methods=['GET'])
 def account():
     """
     获取流水账单
